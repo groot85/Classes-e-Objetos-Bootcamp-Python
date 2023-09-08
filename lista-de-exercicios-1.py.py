@@ -18,21 +18,21 @@ class Carro: #ao criar uma classe estamos criando um "padrao" para chamar o obje
     def desliga (self):
         self.ligado = False
         self.velocidade = 0.0
-  
+
     def acelera (self):
         if self.ligado == False:
             return
-  
+
         if self.velocidade < self.lim_vel:
             self.velocidade += 5
-  
+
     def desacelera (self):
         if self.ligado == False:
             return
-        
+
         if self.velocidade > 0:
             self.velocidade -= 5
-  
+
     def __str__ (self):
         ligado_str = "ligado" if self.ligado == True else "desligado"
         return f"Carro {self.modelo} da cor {self.cor} está {ligado_str}, à velocidade de {self.velocidade} km/h"
